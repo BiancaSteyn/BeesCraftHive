@@ -23,6 +23,22 @@ header img.logo {
 .wrap {
     padding-top: 160px; 
 }
+    /* MOBILE SIZE — triggers below 600px width */
+@media (max-width: 600px) {
+    header img.logo {
+        height: 120px;   /* smaller logo for mobile */
+    }
+
+    .wrap {
+        padding-top: 130px; /* adjust content spacing under the logo */
+    }
+
+    .logo-wrapper {
+        top: 10px;  /* move logo up a bit on mobile */
+        left: 10px; /* adjust position */
+    }
+}
+
 </style>
 </head>
 <body>
