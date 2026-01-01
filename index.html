@@ -40,6 +40,49 @@ header img.logo {
     }
 }
 
+/* Floating Bee */
+.floating-bee {
+    position: fixed;
+    width: 60px;
+    bottom: 20%;
+    right: 30px;
+    z-index: 999;
+    animation: bee-float 12s infinite linear;
+    pointer-events: none; /* so it doesn't block clicks */
+}
+
+.floating-bee img {
+    width: 100%;
+    height: auto;
+}
+
+/* Bee movement animation */
+@keyframes bee-float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-80px, -60px) rotate(10deg);
+    }
+    50% {
+        transform: translate(-40px, -120px) rotate(-10deg);
+    }
+    75% {
+        transform: translate(60px, -60px) rotate(8deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* Mobile: smaller & less movement */
+@media (max-width: 600px) {
+    .floating-bee {
+        width: 45px;
+        animation-duration: 16s;
+        right: 15px;
+    }
+}
 
 </style>
 </head>
@@ -107,5 +150,10 @@ Place a Custom Order
 <div>Bee's Craft Hive — handcrafted with care · <a href="mailto:hello@beescrafthive.example" style="color:var(--muted)">hello@beescrafthive.example</a></div>
 </footer>
 </div>
+
+<div class="floating-bee">
+  <img src="Images/bee.png" alt="Floating Bee">
+</div>
+    
 </body>
 </html>
