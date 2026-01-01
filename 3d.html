@@ -39,6 +39,51 @@ header img.logo {
     }
 }
 
+.floating-note {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff0c2;
+    color: #333;
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 14px;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 999;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.04);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .floating-note {
+        top: auto;
+        bottom: 20px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        font-size: 13px;
+        transform: none;
+    }
+}
+    
 </style>
 </head>
 <body>
@@ -272,7 +317,15 @@ target="_blank">
 Place a Custom Order
 </a>
 </div>
+    
 </footer>
 </div>
+   <div class="floating-note">
+  🐝 ❗
+  <span>
+    Please fill in the colour you prefer and if there is an additional notes when you place an order!
+  </span>
+</div>
+ 
 </body>
 </html>
