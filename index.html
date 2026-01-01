@@ -40,15 +40,15 @@ header img.logo {
     }
 }
 
-/* Floating Bee – right side only */
+/* Floating Bee – locked to the right */
 .floating-bee {
     position: fixed;
     right: 20px;
     top: 40%;
     width: 60px;
     z-index: 999;
-    animation: bee-buzz 10s infinite ease-in-out;
-    pointer-events: none; /* does not block clicks */
+    pointer-events: none;
+    animation: bee-buzz-vertical 10s infinite ease-in-out;
 }
 
 .floating-bee img {
@@ -57,32 +57,32 @@ header img.logo {
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
 }
 
-/* Gentle buzzing motion */
-@keyframes bee-buzz {
+/* ONLY vertical movement */
+@keyframes bee-buzz-vertical {
     0% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
     }
     25% {
-        transform: translate(-15px, -30px) rotate(6deg);
+        transform: translateY(-25px) rotate(5deg);
     }
     50% {
-        transform: translate(0, -60px) rotate(-6deg);
+        transform: translateY(-50px) rotate(-5deg);
     }
     75% {
-        transform: translate(-10px, -30px) rotate(4deg);
+        transform: translateY(-25px) rotate(4deg);
     }
     100% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
     }
 }
 
-/* Mobile tweaks */
+/* Mobile */
 @media (max-width: 600px) {
     .floating-bee {
         width: 42px;
         right: 10px;
         top: auto;
-        bottom: 90px; /* stays above buttons */
+        bottom: 90px;
         animation-duration: 14s;
     }
 }
