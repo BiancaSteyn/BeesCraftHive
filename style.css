@@ -3,14 +3,17 @@
    MAIN STYLESHEET
 ========================= */
 
+/* =========================
+   BEE'S CRAFT HIVE
+========================= */
+
 :root{
-    --bg:#F7F1FF;
-    --purple:#5B1A9A;
-    --purple-light:#D9C2FF;
-    --gold:#F4C430;
+    --purple:#6b21a8;
+    --purple-light:#f3e8ff;
+    --gold:#f4c430;
+    --bg:#faf7ff;
+    --text:#333;
     --white:#ffffff;
-    --text:#2D1B3D;
-    --muted:#6A6A6A;
     --shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
@@ -21,14 +24,14 @@
 }
 
 body{
+    font-family:'Segoe UI',sans-serif;
     background:var(--bg);
     color:var(--text);
-    font-family:'Segoe UI', sans-serif;
     line-height:1.6;
 }
 
 /* =========================
-   CONTAINER
+   PAGE WRAPPER
 ========================= */
 
 .wrap{
@@ -42,29 +45,21 @@ body{
 ========================= */
 
 header{
-    background:white;
-    border-radius:20px;
-    padding:20px 30px;
-    margin-bottom:30px;
-    box-shadow:var(--shadow);
-
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-}
 
-/* =========================
-   LOGO
-========================= */
+    background:white;
+    border-radius:20px;
+    padding:20px 30px;
 
-.logo-wrapper{
-    display:flex;
-    align-items:center;
+    box-shadow:var(--shadow);
+    margin-bottom:25px;
 }
 
 .logo{
-    height:120px;
+    height:90px;
     width:auto;
 }
 
@@ -90,23 +85,83 @@ nav a:hover{
 }
 
 /* =========================
+   BANNER
+========================= */
+
+.banner{
+    margin-bottom:30px;
+}
+
+.banner img{
+    width:100%;
+    display:block;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-home{
+    text-align:center;
+    padding:50px 30px;
+
+    background:white;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+
+    margin-bottom:30px;
+}
+
+.hero-home h1{
+    color:var(--purple);
+    font-size:3.5rem;
+    margin-bottom:10px;
+}
+
+.hero-tagline{
+    color:var(--gold);
+    font-size:1.5rem;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero-text{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:25px;
+    color:#555;
+}
+
+/* =========================
    BUTTONS
 ========================= */
 
 .cta{
     display:inline-block;
-    background:var(--purple);
+
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        #8b5cf6
+    );
+
     color:white;
-    padding:12px 20px;
-    border-radius:30px;
     text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:30px;
+
     font-weight:bold;
+
     transition:0.3s;
 }
 
 .cta:hover{
-    background:var(--gold);
-    color:var(--text);
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(107,33,168,0.3);
 }
 
 /* =========================
@@ -118,49 +173,13 @@ nav a:hover{
     border-radius:20px;
     padding:30px;
     margin-bottom:30px;
+
     box-shadow:var(--shadow);
 }
 
 .section h2{
     color:var(--purple);
-    margin-bottom:15px;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero{
-    display:flex;
-    gap:30px;
-    align-items:center;
-}
-
-.hero .intro{
-    flex:1;
-}
-
-.hero h1{
-    color:var(--purple);
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-.hero p.lead{
-    color:var(--muted);
-    font-size:1.1rem;
-}
-
-/* =========================
-   INFO CARD
-========================= */
-
-.card{
-    background:#F8F3FF;
-    border-left:6px solid var(--gold);
-    border-radius:12px;
-    padding:20px;
-    margin-top:20px;
+    margin-bottom:20px;
 }
 
 /* =========================
@@ -169,20 +188,22 @@ nav a:hover{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 /* =========================
-   PRODUCT CARD
+   PRODUCT CARDS
 ========================= */
 
 .product{
     background:white;
-    border-radius:20px;
-    padding:15px;
+
+    border-radius:18px;
+    overflow:hidden;
+
     box-shadow:var(--shadow);
+
     transition:0.3s;
 }
 
@@ -193,38 +214,62 @@ nav a:hover{
 .product img{
     width:100%;
     height:250px;
-    object-fit:contain;
-    border-radius:15px;
-    background:white;
+
+    object-fit:cover;
+
+    display:block;
 }
 
 .product h3{
     color:var(--purple);
-    margin-top:15px;
+    padding:15px 15px 5px;
 }
 
 .product p{
-    color:var(--muted);
+    padding:0 15px 15px;
+    color:#666;
 }
 
-.price{
-    font-weight:bold;
-    color:var(--purple);
-    margin-top:10px;
+.product .cta{
+    margin:15px;
 }
 
 /* =========================
-   BANNER IMAGE
+   FEATURED PRODUCTS
 ========================= */
 
-.banner{
-    margin-bottom:30px;
+.product h3:last-child{
+    padding-bottom:15px;
 }
 
-.banner img{
-    width:100%;
-    border-radius:25px;
-    box-shadow:var(--shadow);
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:linear-gradient(
+        135deg,
+        var(--purple),
+        #4c1d95
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin-bottom:5px;
 }
 
 /* =========================
@@ -234,51 +279,40 @@ nav a:hover{
 .floating-bee{
     position:fixed;
     right:20px;
-    top:40%;
+    top:50%;
+
     width:60px;
+
     z-index:999;
-    pointer-events:none;
-    animation:bee-buzz 8s infinite ease-in-out;
+
+    animation:bee-float 8s infinite ease-in-out;
 }
 
 .floating-bee img{
     width:100%;
 }
 
-@keyframes bee-buzz{
+@keyframes bee-float{
+
     0%{
-        transform:translateY(0px) rotate(0deg);
+        transform:translateY(0px);
     }
+
     25%{
-        transform:translateY(-15px) rotate(4deg);
+        transform:translateY(-15px);
     }
+
     50%{
-        transform:translateY(-35px) rotate(-4deg);
+        transform:translateY(-35px);
     }
+
     75%{
-        transform:translateY(-15px) rotate(4deg);
+        transform:translateY(-15px);
     }
+
     100%{
-        transform:translateY(0px) rotate(0deg);
+        transform:translateY(0px);
     }
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:var(--purple);
-    color:white;
-    text-align:center;
-    padding:30px;
-    border-radius:20px 20px 0 0;
-    margin-top:50px;
-}
-
-footer a{
-    color:var(--gold);
-    text-decoration:none;
 }
 
 /* =========================
@@ -288,8 +322,8 @@ footer a{
 @media (max-width:768px){
 
     header{
+        flex-direction:column;
         text-align:center;
-        justify-content:center;
     }
 
     nav{
@@ -297,26 +331,24 @@ footer a{
         margin-top:15px;
     }
 
-    .hero{
-        flex-direction:column;
-    }
-
-    .hero h1{
-        font-size:2.2rem;
-    }
-
     .logo{
-        height:90px;
+        height:70px;
+    }
+
+    .hero-home h1{
+        font-size:2.4rem;
+    }
+
+    .hero-tagline{
+        font-size:1.2rem;
     }
 
     .product img{
-        height:200px;
+        height:220px;
     }
 
     .floating-bee{
         width:40px;
         right:10px;
-        bottom:80px;
-        top:auto;
     }
 }
