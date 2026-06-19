@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bee's Craft Hive — Baked Goods</title>
+
+<style>
+:root{
+    --bg:#F9F3EA;
+    --accent:#B9819C;
+    --text:#222;
+    --muted:#6b6b6b;
+    --maxw:1100px;
+    font-family:'Segoe UI', Roboto, system-ui;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.wrap{
+    max-width:var(--maxw);
+    margin:28px auto;
+    padding:20px;
+    padding-top:160px;
+}
+
+header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+nav{
+    margin-left:auto;
+}
+
+nav a{
+    margin-left:12px;
+    text-decoration:none;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.section{
+    margin-top:28px;
+    padding:22px;
+    background:rgba(255,255,255,0.6);
+    border-radius:12px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    margin-top:16px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    padding:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.product img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    border-radius:10px;
+    background:white;
+}
+
+.price{
+    font-weight:700;
+    margin-top:8px;
+}
+
+.cta{
+    display:inline-block;
+    background:var(--accent);
+    color:white;
+    padding:10px 16px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:12px;
+}
+
+footer{
+    margin-top:28px;
+    padding:18px;
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* Logo */
+.logo-wrapper{
+    position:absolute;
+    top:50px;
+    left:450px;
+    z-index:10;
+}
+
+header img.logo{
+    height:250px;
+}
+
+/* Floating Bee */
+.floating-bee{
+    position:fixed;
+    right:20px;
+    top:40%;
+    width:60px;
+    z-index:999;
+    pointer-events:none;
+    animation:bee-buzz-vertical 10s infinite ease-in-out;
+}
+
+.floating-bee img{
+    width:100%;
+    height:auto;
+}
+
+@keyframes bee-buzz-vertical{
+    0%{transform:translateY(0) rotate(0deg);}
+    25%{transform:translateY(-25px) rotate(5deg);}
+    50%{transform:translateY(-50px) rotate(-5deg);}
+    75%{transform:translateY(-25px) rotate(4deg);}
+    100%{transform:translateY(0) rotate(0deg);}
+}
+
+/* Floating Reminder */
+.floating-note{
+    position:fixed;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#fff0c2;
+    color:#333;
+    padding:14px 18px;
+    border-radius:16px;
+    font-size:14px;
+    max-width:240px;
+    text-align:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);
+    z-index:999;
+    animation:pulse 2.5s infinite;
+}
+
+.floating-note::before{
+    content:"🐝 ❗";
+    display:block;
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+@keyframes pulse{
+    0%{transform:translateY(-50%) scale(1);}
+    50%{transform:translateY(-50%) scale(1.04);}
+    100%{transform:translateY(-50%) scale(1);}
+}
+
+@media (max-width:600px){
+
+    header img.logo{
+        height:120px;
+    }
+
+    .wrap{
+        padding-top:130px;
+    }
+
+    .logo-wrapper{
+        top:10px;
+        left:10px;
+    }
+
+    .floating-note{
+        display:none;
+    }
+
+    .floating-bee{
+        width:42px;
+        right:10px;
+        bottom:90px;
+        top:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+
+<div class="logo-wrapper">
+    <img class="logo" src="Images/bch-logo.png" alt="Bee's Craft Hive logo">
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="crochet.html">Crochet Items</a>
+<a href="vinyl.html">Vinyl Items</a>
+<a href="3d.html">3D Items</a>
+<a href="baked-goods.html">Baked Goods</a>
+<a href="https://wa.me/27635668069" target="_blank">WhatsApp</a>
+</nav>
+
+</header>
+
+<main class="section">
+
+<h2>Baked Goods</h2>
+
+<p style="color:var(--muted)">
+Freshly baked treats made with love. Perfect for birthdays, gifts, family gatherings, special occasions, or simply treating yourself.
+</p>
+
+<a class="cta"
+href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order%20baked%20goods.%0A%0AProduct:%0AQuantity:%0ACollection%20or%20Delivery:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+target="_blank">
+Order Baked Goods
+</a>
+
+<div class="grid">
+
+<div class="product">
+    <img src="Images/koeksisters.jpg" alt="Koeksisters">
+    <h3>Koeksisters</h3>
+    <p>Traditional homemade koeksisters, freshly prepared and soaked in delicious syrup.</p>
+    <div class="price">R40 per dozen</div>
+
+    <a class="cta"
+    href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Koeksisters%0A%0AQuantity:%0ACollection%20or%20Delivery:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+    target="_blank">
+    Place an Order
+    </a>
+</div>
+
+</div>
+
+</main>
+
+<section class="section">
+
+<h2>Custom Orders</h2>
+
+<p style="color:var(--muted)">
+Looking for something specific? Contact us for custom baked goods, special events, gifts, or bulk orders.
+</p>
+
+<a class="cta"
+href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20enquire%20about%20a%20custom%20baked%20goods%20order.%0A%0AWhat%20I%20am%20looking%20for:%0AQuantity:%0ACollection%20or%20Delivery:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+target="_blank">
+Request a Custom Order
+</a>
+
+</section>
+
+<footer>
+<p style="color:purple">You can WhatsApp me: +27 63 566 8069</p>
+
+<div>
+<a href="index.html">Home</a> ·
+<a href="crochet.html">Crochet</a> ·
+<a href="vinyl.html">Vinyl</a> ·
+<a href="3d.html">3D</a>
+</div>
+</footer>
+
+</div>
+
+<div class="floating-note">
+Please fill in the colour you prefer and if there is any additional notes when you place an order!
+</div>
+
+<div class="floating-bee">
+<img src="Images/cute-bee.png" alt="Floating Bee">
+</div>
+
+</body>
+</html>
