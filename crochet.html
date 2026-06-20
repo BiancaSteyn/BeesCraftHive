@@ -1,227 +1,192 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bee's Craft Hive — Crochet Items</title>
-<style>
-/* same styles as index for simplicity */
-:root{--bg:#F9F3EA;--accent:#B9819C;--bee:#F4C430;--text:#222;--muted:#6b6b6b;--maxw:1100px;font-family: 'Segoe UI', Roboto, system-ui}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}.wrap{max-width:var(--maxw);margin:28px auto;padding:20px}header{display:flex;align-items:center;gap:18px}nav{margin-left:auto}nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}.section{margin-top:28px;padding:22px;background:rgba(255,255,255,0.6);border-radius:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}.product{background:white;border-radius:10px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}.product img{width:100%;height:160px;object-fit:cover;border-radius:8px}.price{font-weight:700;margin-top:8px}.cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;margin-top:12px}footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
-/* Position logo so it overlaps the content */
-.logo-wrapper {
-    position: absolute;
-    top: 50px;        /* move logo down */
-    left: 450px;       /* move logo inward */
-    z-index: 10;      /* make sure it sits above everything */
-}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-.product img {
-    height: 220px;
-}    
+<title>Bee's Craft Hive | Crochet Items</title>
 
-header img.logo {
-    height: 250px;    /* adjust size here */
-}
+<link rel="stylesheet" href="css/style.css">
 
-/* Add top padding so text does not sit under the logo */
-.wrap {
-    padding-top: 160px; 
-}
-/* MOBILE SIZE — triggers below 600px width */
-@media (max-width: 600px) {
-    header img.logo {
-        height: 120px;   /* smaller logo for mobile */
-    }
-
-    .wrap {
-        padding-top: 130px; /* adjust content spacing under the logo */
-    }
-
-    .logo-wrapper {
-        top: 10px;  /* move logo up a bit on mobile */
-        left: 10px; /* adjust position */
-    }
-}
-
-.floating-note {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff0c2;
-    color: #333;
-    padding: 14px 18px;
-    border-radius: 16px;
-    font-size: 14px;
-    max-width: 220px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    z-index: 999;
-    animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translateY(-50%) scale(1);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    }
-    50% {
-        transform: translateY(-50%) scale(1.04);
-        box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-    }
-    100% {
-        transform: translateY(-50%) scale(1);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .floating-note {
-        top: auto;
-        bottom: 20px;
-        right: 10px;
-        left: 10px;
-        max-width: none;
-        font-size: 13px;
-        transform: none;
-    }
-}
-    
-</style>
 </head>
+
 <body>
+
 <div class="wrap">
+
 <header>
-<div class="logo-wrapper">
-    <img class="logo" src="Images/bch-logo.png" alt="Bee's Craft Hive logo">
-</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="crochet.html">Crochet Items</a>
-<a href="vinyl.html">Vinyl Items</a>
-<a href="3d.html">3D Items</a>
-<a href="baked-goods.html">Baked Goods</a>    
-<a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20place%20a%20CUSTOM%20order.%0A%0AProduct%20type:%0ADescription%20/%20idea:%0APreferred%20colours:%0ASize%20(if%20applicable):%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place a Custom Order
-</a>
-</nav>
+
+    <div class="logo-wrapper">
+        <img class="logo" src="Images/bch-logo.png" alt="Bee's Craft Hive Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="crochet.html">🧶 Crochet</a>
+        <a href="vinyl.html">👕 Vinyl</a>
+        <a href="3d.html">🧱 3D Printing</a>
+        <a href="baked-goods.html">🍪 Baked Goods</a>
+    </nav>
+
 </header>
 
+<section class="hero-home">
 
-<main class="section">
-<h2>Crochet Items</h2>
-<p style="color:var(--muted)">Our crochet range includes amigurumi plushies, small toys, beanies, baby booties and decorative pieces. Each item is handmade from soft, durable yarn. Colours and eyes/embellishments can be customised on request.</p>
+    <h1>🧶 Crochet Items</h1>
 
+    <p class="hero-tagline">
+        Handmade with Love
+    </p>
 
-<h3>Sizes & options</h3>
-<ul style="color:var(--muted)">
-<li><strong>Small:</strong> 5–10 cm tall — great as keychain charms or small gifts.</li>
-<li><strong>Medium:</strong> 10–20 cm tall — perfect size for small cuddly toys.</li>
-<li><strong>Large:</strong> 20–35 cm — decorative cuddle companions.</li>
-<li>Optional: Can add keychain to any small item, or add a personalized touch->see big bear (+ small extra fee).</li>
-<!--<li>Optional: personalised name tags, gift-wrapping, or themed costumes (+ small extra fee).</li>-->
-</ul>
+    <p class="hero-text">
+        Every crochet item is handmade with care using quality yarn.
+        Colours can be customised and many items can be personalised
+        to create the perfect gift.
+    </p>
 
+</section>
 
-<div class="grid">
-<!-- main showcase images provided -->
-<div class="product"><img src="Images/small-items.png" alt="small items"><h3>Small Crochet Collection</h3><p>Keychains, minis and tiny animals, perfect for gifts.</p><div class="price">From R70</div></div>
+<section class="section">
 
+    <h2>Available Sizes</h2>
 
-<!-- additional examples -->
-<div class="product"><img src="Images/penguin.png" alt="penguin"><h3>Penguin (Small)</h3><p>Cute penguin</p><div class="price">R70</div>
-   <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Penguin%(small)%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
+    <div class="grid">
 
-</div>
+        <div class="product">
+            <h3>Small Items</h3>
+            <p>5–10cm tall</p>
+            <p>Perfect for keychains and small gifts.</p>
+            <p><strong>From R100</strong></p>
+        </div>
 
+        <div class="product">
+            <h3>Medium Items</h3>
+            <p>10–20cm tall</p>
+            <p>Ideal for plushies and decorative pieces.</p>
+            <p><strong>From R140</strong></p>
+        </div>
 
-<div class="product"><img src="Images/bee.png" alt="bee"><h3>Bee Amigurumi (Small)</h3><p>Signature bee plush.</p><div class="price">R75</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Bee%20(small)%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-</div>
+        <div class="product">
+            <h3>Large Items</h3>
+            <p>20–35cm tall</p>
+            <p>Large cuddly companions and statement pieces.</p>
+            <p><strong>From R180</strong></p>
+        </div>
 
+    </div>
 
-<div class="product"><img src="Images/cow.png" alt="cow"><h3>Cow (Small)</h3><p>Small cow plush.</p><div class="price">R80</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Cow%20(small)%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-></div>
+</section>
 
+<section class="section">
 
-<div class="product"><img src="Images/bunny.png" alt="bunny"><h3>Bunny (Medium)</h3><p>Soft and floppy ears.</p><div class="price">R100</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Bunny%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-</div>
+    <h2>Our Crochet Collection</h2>
 
+    <div class="grid">
 
-<div class="product"><img src="Images/big-items.png" alt="large items"><h3>Large Crochet Collection</h3><p>Big Cows, Unicorns and Teddy bears, ready to play.</p><div class="price">From R180</div></div>
+        <div class="product">
+            <img src="Images/bee.png" alt="Bee">
+            <h3>Bee Amigurumi</h3>
+            <p>Small crochet bee.</p>
+            <p class="price">R110</p>
 
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Bee%20Amigurumi%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
 
-<div class="product"><img src="Images/big-cow.png" alt="big cow"><h3>Cow (Large)</h3><p>Large cuddly cow.</p><div class="price">R180</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Cow%20(large)%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-</div>
+        </div>
 
+        <div class="product">
+            <img src="Images/cow.png" alt="Cow">
+            <h3>Cow (Small)</h3>
+            <p>Small crochet cow.</p>
+            <p class="price">R120</p>
 
-<div class="product"><img src="Images/big-teddy.png" alt="big teddy"><h3>Teddy (Large)</h3><p>Classic large teddy bear.</p><div class="price">R180</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Teddy%20Bear%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-</div>
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Small%20Cow%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
 
+        </div>
 
-<div class="product"><img src="Images/sunflower-fairy-doll.png" alt="sunflower fairy"><h3>Sunflower Fairy Doll</h3><p>Decorative themed doll that transfers into a Sunflower.</p><div class="price">R120</div>
-    <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Crochet%20Sunflower%20Fairy%20Doll%0A%0AColour:%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place an Order
-</a>
-</div>
+        <div class="product">
+            <img src="Images/bunny.png" alt="Bunny">
+            <h3>Bunny</h3>
+            <p>Soft bunny plush.</p>
+            <p class="price">R140</p>
 
-</div>
-</main>
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Bunny%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
 
+        </div>
+
+        <div class="product">
+            <img src="Images/penguin.png" alt="Penguin">
+            <h3>Penguin</h3>
+            <p>Cute crochet penguin.</p>
+            <p class="price">R100</p>
+
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Penguin%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
+
+        </div>
+
+        <div class="product">
+            <img src="Images/big-cow.png" alt="Big Cow">
+            <h3>Large Cow</h3>
+            <p>Large crochet cow.</p>
+            <p class="price">R220</p>
+
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Large%20Cow%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
+
+        </div>
+
+        <div class="product">
+            <img src="Images/sunflower-fairy-doll.png" alt="Sunflower Fairy">
+            <h3>Sunflower Fairy Doll</h3>
+            <p>Transforms into a sunflower.</p>
+            <p class="price">R190</p>
+
+            <a class="cta"
+            href="https://wa.me/27635668069?text=Hi%20Bee's%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20order:%0A•%20Sunflower%20Fairy%20Doll%0A%0AColour:%0AOther%20notes:%0A%0AJust%20a%20friendly%20reminder%20that%20all%20delivery%20charges%20will%20be%20payable%20by%20the%20customer.%0A%0AThank%20you!"
+            target="_blank">
+            Place Order
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <footer>
-     <p style="color:purple">You can WhatsApp me: '+27 63 566 8069'</p>
-<div><a href="index.html">Home</a> · <a href="vinyl.html">Vinyl</a> · <a href="3d.html">3D</a> · <a class="cta"
-href="https://wa.me/27635668069?text=Hi%20Bee%27s%20Craft%20Hive!%0A%0AMy%20name%20is:%0AI%20would%20like%20to%20place%20a%20CUSTOM%20order.%0A%0AProduct%20type:%0ADescription%20/%20idea:%0APreferred%20colours:%0ASize%20(if%20applicable):%0AOther%20notes:%0A%0ADelivery%20charges%20are%20payable%20by%20the%20customer.%0A%0AThank%20you!"
-target="_blank">
-Place a Custom Order
-</a>
-</div>
+
+    <h2>Bee's Craft Hive 🐝</h2>
+
+    <p>Custom • Unique • Handmade</p>
+
+    <br>
+
+    <p>📱 WhatsApp: 063 566 8069</p>
+
+    <p>📸 Instagram: @bees_craft_hive</p>
+
 </footer>
-</div>
 
 </div>
-   <div class="floating-note">
-  🐝 ❗
-  <span>
-    Please fill in the colour you prefer and if there is an additional notes when you place an order!
-  </span>
-  ❗ 🐝     
-</div>
-    
+
 </body>
 </html>
